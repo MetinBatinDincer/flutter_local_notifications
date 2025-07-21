@@ -1,16 +1,23 @@
-# send_natifi_1
+# Send Notification App
 
-A new Flutter project.
+## Project Description
+This project is a mobile application developed using Flutter. The primary goal of the application is to send a notification to the user with the message "Button pressed" 3 seconds after a button is pressed. The `flutter_local_notifications` package is utilized to provide notification functionality, and the project supports both Android and iOS platforms.
 
-## Getting Started
+## Features
+- Displays a notification 3 seconds after the button is pressed.
+- Native notification support for Android and iOS.
+- Customizable notification channel and icon.
 
-This project is a starting point for a Flutter application.
+## Installation
 
-A few resources to get you started if this is your first Flutter project:
+### Prerequisites
+- [Flutter SDK](https://flutter.dev/docs/get-started/install) must be installed.
+- An IDE like Android Studio or VS Code.
+- An Android emulator or physical device for testing.
+- Internet connection for the `flutter_local_notifications` package.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Step-by-Step Installation
+1. **Clone or Open the Project**:
+   - Clone the project to your local machine or open the existing project:
+     ```bash
+     git clone <repo_url>
