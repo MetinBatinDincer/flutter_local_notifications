@@ -1,0 +1,30 @@
+main.dart
+Değişiklikler:
+Başlangıçta boş bir Flutter uygulaması oluşturuldu ve flutter_local_notifications paketi ile 3 saniye sonra bildirim gösteren bir buton eklendi.
+AndroidInitializationSettings içinde ikon olarak app_icon tanımlandı, ancak ikon eklenmediği için hata alındı. Daha sonra '' (boş) ve ic_launcher gibi alternatifler denendi.
+custom_icon ikonu eklendikten sonra AndroidInitializationSettings('custom_icon') olarak güncellendi.
+Bildirim kanalını oluşturmak için AndroidNotificationChannel eklendi.
+_showNotificationAfterDelay fonksiyonuna hata yakalama ve konsol çıktısı eklenerek bildirim gönderiminin başarısı kontrol edildi.
+Amaç: Butona basıldığında 3 saniye sonra "Butona basıldı" bildirimini göstermek.
+AndroidManifest.xml
+Değişiklikler:
+<uses-permission android:name="android.permission.POST_NOTIFICATIONS"/> izni eklendi.
+Amaç: Android 13 ve üzeri sürümlerde bildirim göndermek için gerekli izni sağlamak.
+<proje_klasörü>/android/app/src/main/res/drawable/
+Değişiklikler:
+custom_icon.png dosyasını manuel olarak eklendi (başlangıçta cutom_icon.png olarak yanlış yazılmış, sonra custom_icon.png olarak düzeltildi).
+Amaç: Bildirimlerde kullanılacak ikonu sağlamak.
+Ek Notlar:
+Komutlar: flutter clean, flutter pub get, ve flutter run komutları sıkça kullanılarak proje temizlendi, bağımlılıklar güncellendi ve uygulama yeniden derlendi.
+Sorunlar:
+Başlangıçta ikon bulunamama hatası (invalid_icon) nedeniyle çeşitli ikon denemeleri yapıldı.
+Bildirim gelmeme sorunu için kanal oluşturma ve izin kontrolleri eklendi.
+Test: Uygulama sdk gphone64 x86 64 emülatöründe test edildi, ancak bildirim hala gelmedi. Bu, izin veya kanal yapılandırması ile ilgili olabilir.
+Öneriler:
+Notunuza, cihazda bildirim izinlerinin manuel olarak kontrol edildiğini ve "Rahatsız Etmeyin" modunun kapalı olduğundan emin olunduğunu ekleyebilirsiniz.
+Gelecekte konsol çıktılarındaki mesajları (örneğin, "Bildirim gönderildi!" veya hata mesajları) kontrol etmeyi unutmayın.
+Bu notlar, projenizin gelişim sürecini ve yapılan değişiklikleri açıkça yansıtıyor. Eğer başka bir şey eklemek isterseniz, lütfen söyleyin!
+
+
+
+paket açılmayınca sürüm update edildi.
